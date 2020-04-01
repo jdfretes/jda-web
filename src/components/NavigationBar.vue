@@ -15,20 +15,24 @@
 
     <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
     <v-spacer></v-spacer>
-    
+
     <v-toolbar-title class="page-title">JDA beats</v-toolbar-title>
 
     <v-spacer></v-spacer>
 
-    <v-btn icon>
+    <v-btn icon @click="goToNetwork('spotify')">
+      <v-icon>mdi-spotify</v-icon>
+    </v-btn>
+
+    <v-btn icon @click="goToNetwork('instagram')">
       <v-icon>mdi-instagram</v-icon>
     </v-btn>
 
-    <v-btn icon>
+    <v-btn icon @click="goToNetwork('soundcloud')">
       <v-icon>mdi-soundcloud</v-icon>
     </v-btn>
 
-    <v-btn icon>
+    <v-btn icon @click="goToNetwork('youtube')">
       <v-icon>mdi-youtube</v-icon>
     </v-btn>
 
@@ -45,14 +49,33 @@
 export default {
   name: "NavigationBar",
 
-  data: () => ({
+  data: () => ({}),
+  methods: {
+    goToNetwork(network) {
+      switch (network) {
+        case "spotify":
+          window.open("https://open.spotify.com/artist/6v6MeoRUMeFfKcAyYNEge8", "_self");
+          break;
+        case "instagram":
+          window.open("https://www.instagram.com/jda.beats/", "_self");
+          break;
+        case "soundcloud":
+          window.open("https://soundcloud.com/jda_beats/tracks", "_self");
+          break;
+        case "youtube":
+          window.open("https://www.youtube.com/channel/UCiL8_VpqEWLT-4GIKJKx8IQ", "_self");
+          break;
 
-  })
+        default:
+          break;
+      }
+    }
+  }
 };
 </script>
 
 <style>
 .page-title {
-    font-size: 2.5rem !important;
+  font-size: 2rem !important;
 }
 </style>

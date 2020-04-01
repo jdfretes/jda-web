@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <NavigationBar/>
+    <NavigationBar />
   </v-container>
 </template>
 
@@ -8,8 +8,8 @@
 import NavigationBar from "./NavigationBar.vue";
 export default {
   name: "Home",
-   components: {
-    NavigationBar,
+  components: {
+    NavigationBar
   },
   data: () => ({})
 };
