@@ -1,13 +1,11 @@
 <template>
   <v-app-bar
-    absolute
-    color="#6A76AB"
+    color="indigo"
     dark
     shrink-on-scroll
     prominent
     src="https://images.unsplash.com/photo-1525362081669-2b476bb628c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
     fade-img-on-scroll
-    scroll-target="#scrolling-techniques-4"
   >
     <template v-slot:img="{ props }">
       <v-img v-bind="props" gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"></v-img>
@@ -43,6 +41,7 @@
         <!-- <v-tab>Contact</v-tab> -->
       </v-tabs>
     </template>
+    
   </v-app-bar>
 </template>
 <script>
