@@ -15,6 +15,7 @@
     <v-spacer></v-spacer>
 
     <v-toolbar-title class="page-title">JDA beats</v-toolbar-title>
+    <!-- <v-img src="../assets/jda.jpg" aspect-ratio="1"></v-img> -->
 
     <v-spacer></v-spacer>
 
@@ -36,12 +37,10 @@
 
     <template v-slot:extension>
       <v-tabs align-with-title>
-        <v-tab>Home</v-tab>
-        <v-tab>Beats</v-tab>
-        <!-- <v-tab>Contact</v-tab> -->
+        <!-- <v-tab>Home</v-tab>
+        <v-tab>Beats</v-tab> -->
       </v-tabs>
     </template>
-    
   </v-app-bar>
 </template>
 <script>
@@ -53,7 +52,10 @@ export default {
     goToNetwork(network) {
       switch (network) {
         case "spotify":
-          window.open("https://open.spotify.com/artist/6v6MeoRUMeFfKcAyYNEge8", "_self");
+          window.open(
+            "https://open.spotify.com/artist/6v6MeoRUMeFfKcAyYNEge8",
+            "_self"
+          );
           break;
         case "instagram":
           window.open("https://www.instagram.com/jda.beats/", "_self");
@@ -62,7 +64,10 @@ export default {
           window.open("https://soundcloud.com/jda_beats/tracks", "_self");
           break;
         case "youtube":
-          window.open("https://www.youtube.com/channel/UCiL8_VpqEWLT-4GIKJKx8IQ", "_self");
+          window.open(
+            "https://www.youtube.com/channel/UCiL8_VpqEWLT-4GIKJKx8IQ",
+            "_self"
+          );
           break;
 
         default:
