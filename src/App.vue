@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app id="inspire" >
       <Home/>
   </v-app>
 </template>
@@ -19,3 +19,7 @@ export default {
   }),
 };
 </script>
+
+<style  scoped>
+
+</style>
